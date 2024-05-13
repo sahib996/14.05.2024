@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewData["Title"] = "Create";
+    
+}
+@model CreateProductVM
+
+<form method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label asp-for="Name">Ad</label>
+        <input asp-for="Name" class="form-control">
+        <span asp-validation-for="Name" class="text-danger"> </span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="CostPrice">Cost Price</label>
+        <input asp-for="CostPrice" class="form-control">
+        <span asp-validation-for="CostPrice" class="text-danger"> </span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="SellPrice">Sell Price</label>
+        <input asp-for="SellPrice" class="form-control">
+        <span asp-validation-for="SellPrice" class="text-danger"> </span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Discount">Discount</label>
+        <input asp-for="Discount" class="form-control">
+        <span asp-validation-for="Discount" class="text-danger"> </span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="StockCount">Stock Count</label>
+        <input asp-for="StockCount" class="form-control">
+        <span asp-validation-for="StockCount" class="text-danger"> </span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="ImageFile">Image File</label>
+        <input asp-for="ImageFile" class="form-control">
+        <span asp-validation-for="ImageFile" class="text-danger"> </span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Raiting">Raiting</label>
+        <input asp-for="Raiting" class="form-control">
+        <span asp-validation-for="Raiting" class="text-danger"> </span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="ImageFiles">Image Files</label>
+        <input asp-for="ImageFiles" class="form-control">
+        <span asp-validation-for="ImageFiles" class="text-danger"> </span>
+    </div>
+
+
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+

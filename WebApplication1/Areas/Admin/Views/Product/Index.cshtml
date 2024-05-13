@@ -1,0 +1,81 @@
+﻿
+
+@{
+    ViewData["Title"] = "Index";
+
+}
+@model IEnumerable<GetProdactAdminVM>
+
+<h5 class="card-title fw-semibold mb-4">Products</h5>
+<div class="table-responsive">
+    <a asp-action="Create" class="btn btn-outline-success m-1">Create</a>
+    <table class="table table-bordered text-nowrap mb-0 align-middle">
+        <thead class="text-dark fs-4">
+            <tr>
+                <th class="border-bottom-0">
+                    <h6 class="fw-semibold mb-0">Id</h6>
+                </th>
+                <th class="border-bottom-0">
+                    <h6 class="fw-semibold mb-0">Image</h6>
+                </th>
+                <th class="border-bottom-0">
+                    <h6 class="fw-semibold mb-0">Name</h6>
+                </th>
+                <th class="border-bottom-0">
+                    <h6 class="fw-semibold mb-0">Cost Price</h6>
+                </th>
+                <th class="border-bottom-0">
+                    <h6 class="fw-semibold mb-0">Discount</h6>
+                </th>
+                <th class="border-bottom-0">
+                    <h6 class="fw-semibold mb-0">Sell Price</h6>
+                </th>
+                <th class="border-bottom-0">
+                    <h6 class="fw-semibold mb-0">Raiting</h6>
+                </th>
+                <th class="border-bottom-0">
+                    <h6 class="fw-semibold mb-0">Stock Count</h6>
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var data in Model)
+            {
+                <tr>
+
+                    <td class="border-bottom-0">
+                        @data.Id
+                    </td>
+                    <td class="border-bottom-0">
+                        <img src="@data.ImageUrl" width="50" />
+                    </td>
+                    <td class="border-bottom-0">
+                        @data.Name
+                    </td>
+                    <td class="border-bottom-0">
+                        @data.CostPrice
+                    </td>
+                    <td class="border-bottom-0">
+                        @data.Discount
+                    </td>
+                    <td class="border-bottom-0">
+                        @data.SellPrice
+                    </td>
+                    <td class="border-bottom-0">
+                        @data.Raiting
+                    </td>
+                    <td class="border-bottom-0">
+                        @data.StockCount
+                    </td>
+                    <td class="border-bottom-0">
+                        <a asp-action="delete" asp-route-id="@data.Id" class="btn btn-danger">Delete</a>
+                        <a asp-action="update" asp-route-id="@data.Id" class="btn btn-warning">Update</a>
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+</div>
+
